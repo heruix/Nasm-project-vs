@@ -1,0 +1,1 @@
+This utility is the same as rdf2com
