@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{65A95211-59E9-4C4A-AF38-A79D5599DB36}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>NasmProject</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="contrib\VSrules\nasm.README" />
+    <None Include="contrib\VSrules\nasm.rules" />
+    <None Include="macros\altreg.mac" />
+    <None Include="macros\fp.mac" />
+    <None Include="macros\ifunc.mac" />
+    <None Include="macros\smartalign.mac" />
+    <None Include="output\outaout.mac" />
+    <None Include="output\outas86.mac" />
+    <None Include="output\outbin.mac" />
+    <None Include="output\outcoff.mac" />
+    <None Include="output\outelf.mac" />
+    <None Include="output\outmacho.mac" />
+    <None Include="output\outobj.mac" />
+    <None Include="output\outrdf.mac" />
+    <None Include="output\outrdf2.mac" />
+    <None Include="rdoff\test\Makefile" />
+    <None Include="rdoff\test\makelib.sh" />
+    <None Include="rdoff\test\rdfseg.asm" />
+    <None Include="rdoff\test\rdfseg2.asm" />
+    <None Include="rdoff\test\rdftest1.asm" />
+    <None Include="rdoff\test\rdftest2.asm" />
+    <None Include="rdoff\test\rdtlib.asm" />
+    <None Include="rdoff\test\rdtmain.asm" />
+    <None Include="rdoff\test\testlib.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="assemble.c" />
+    <ClCompile Include="crc64.c" />
+    <ClCompile Include="directiv.c" />
+    <ClCompile Include="disasm.c" />
+    <ClCompile Include="disp8.c" />
+    <ClCompile Include="eval.c" />
+    <ClCompile Include="exprlib.c" />
+    <ClCompile Include="float.c" />
+    <ClCompile Include="hashtbl.c" />
+    <ClCompile Include="iflag.c" />
+    <ClCompile Include="ilog2.c" />
+    <ClCompile Include="insnsa.c" />
+    <ClCompile Include="insnsb.c" />
+    <ClCompile Include="insnsd.c" />
+    <ClCompile Include="insnsn.c" />
+    <ClCompile Include="labels.c" />
+    <None Include="lib\snprintf.c" />
+    <ClCompile Include="lib\strlcpy.c" />
+    <ClCompile Include="listing.c" />
+    <ClCompile Include="macros.c" />
+    <ClCompile Include="md5c.c" />
+    <None Include="misc\crcgen.c" />
+    <None Include="misc\omfdump.c" />
+    <None Include="misc\xcrcgen.c" />
+    <ClCompile Include="nasm.c" />
+    <ClCompile Include="nasmlib.c" />
+    <None Include="ndisasm.c" />
+    <ClCompile Include="output\codeview.c" />
+    <ClCompile Include="output\nulldbg.c" />
+    <ClCompile Include="output\nullout.c" />
+    <ClCompile Include="output\outaout.c" />
+    <ClCompile Include="output\outas86.c" />
+    <ClCompile Include="output\outbin.c" />
+    <ClCompile Include="output\outcoff.c" />
+    <ClCompile Include="output\outdbg.c" />
+    <ClCompile Include="output\outelf.c" />
+    <ClCompile Include="output\outelf32.c" />
+    <ClCompile Include="output\outelf64.c" />
+    <ClCompile Include="output\outelfx32.c" />
+    <ClCompile Include="output\outform.c" />
+    <ClCompile Include="output\outieee.c" />
+    <ClCompile Include="output\outlib.c" />
+    <ClCompile Include="output\outmacho.c" />
+    <ClCompile Include="output\outobj.c" />
+    <ClCompile Include="output\outrdf2.c" />
+    <ClCompile Include="parser.c" />
+    <ClCompile Include="pptok.c" />
+    <ClCompile Include="preproc-nop.c" />
+    <ClCompile Include="preproc.c" />
+    <ClCompile Include="quote.c" />
+    <ClCompile Include="raa.c" />
+    <ClCompile Include="rbtree.c" />
+    <None Include="rdoff\collectn.c" />
+    <None Include="rdoff\hash.c" />
+    <None Include="rdoff\ldrdf.c" />
+    <None Include="rdoff\rdf2bin.c" />
+    <None Include="rdoff\rdfdump.c" />
+    <None Include="rdoff\rdflib.c" />
+    <None Include="rdoff\rdfload.c" />
+    <None Include="rdoff\rdlar.c" />
+    <None Include="rdoff\rdlib.c" />
+    <None Include="rdoff\rdoff.c" />
+    <None Include="rdoff\rdx.c" />
+    <None Include="rdoff\segtab.c" />
+    <None Include="rdoff\symtab.c" />
+    <ClCompile Include="realpath.c" />
+    <ClCompile Include="regdis.c" />
+    <ClCompile Include="regflags.c" />
+    <ClCompile Include="regs.c" />
+    <ClCompile Include="regvals.c" />
+    <ClCompile Include="saa.c" />
+    <ClCompile Include="stdscan.c" />
+    <ClCompile Include="strfunc.c" />
+    <ClCompile Include="sync.c" />
+    <None Include="test\aouttest.c" />
+    <None Include="test\cofftest.c" />
+    <None Include="test\elftest.c" />
+    <None Include="test\elftest64.c" />
+    <ClCompile Include="tokhash.c" />
+    <ClCompile Include="ver.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="assemble.h" />
+    <ClInclude Include="compiler.h" />
+    <ClInclude Include="directiv.h" />
+    <ClInclude Include="disasm.h" />
+    <ClInclude Include="disp8.h" />
+    <ClInclude Include="eval.h" />
+    <ClInclude Include="float.h" />
+    <ClInclude Include="hashtbl.h" />
+    <ClInclude Include="iflag.h" />
+    <ClInclude Include="iflaggen.h" />
+    <ClInclude Include="insns.h" />
+    <ClInclude Include="insnsi.h" />
+    <ClInclude Include="inttypes\inttypes.h" />
+    <ClInclude Include="labels.h" />
+    <ClInclude Include="listing.h" />
+    <ClInclude Include="md5.h" />
+    <ClInclude Include="nasm.h" />
+    <ClInclude Include="nasmlib.h" />
+    <ClInclude Include="opflags.h" />
+    <ClInclude Include="output\dwarf.h" />
+    <ClInclude Include="output\elf.h" />
+    <ClInclude Include="output\outelf.h" />
+    <ClInclude Include="output\outform.h" />
+    <ClInclude Include="output\outlib.h" />
+    <ClInclude Include="output\pecoff.h" />
+    <ClInclude Include="output\stabs.h" />
+    <ClInclude Include="parser.h" />
+    <ClInclude Include="pptok.h" />
+    <ClInclude Include="preproc.h" />
+    <ClInclude Include="quote.h" />
+    <ClInclude Include="raa.h" />
+    <ClInclude Include="rbtree.h" />
+    <None Include="rdoff\collectn.h" />
+    <None Include="rdoff\hash.h" />
+    <None Include="rdoff\ldsegs.h" />
+    <None Include="rdoff\rdfload.h" />
+    <None Include="rdoff\rdlar.h" />
+    <None Include="rdoff\rdlib.h" />
+    <None Include="rdoff\rdoff.h" />
+    <None Include="rdoff\segtab.h" />
+    <None Include="rdoff\symtab.h" />
+    <ClInclude Include="regdis.h" />
+    <ClInclude Include="regs.h" />
+    <ClInclude Include="saa.h" />
+    <ClInclude Include="stdscan.h" />
+    <ClInclude Include="sync.h" />
+    <ClInclude Include="tables.h" />
+    <ClInclude Include="tokens.h" />
+    <ClInclude Include="version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="contrib\MSVC6.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="nsis\nasm-un.ico" />
+    <Image Include="nsis\nasm.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
