@@ -30,13 +30,13 @@
     <ClCompile Include="..\Source\rdoff\symtab.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Source\nasmlib.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\Source\rdoff\hash.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Source\rdoff\rdoff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\nasmlib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -45,9 +45,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Source\rdoff\rdoff.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Source\nasmlib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Source\rdoff\hash.h">
@@ -63,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Source\rdoff\collectn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\nasmlib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
